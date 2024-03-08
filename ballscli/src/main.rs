@@ -4,7 +4,7 @@ use std::net::TcpStream;
 use std::env;
 
 fn main() -> io::Result<()> {
-    let args = env::args();
+    let mut args = env::args();
     let command = args.next().unwrap();
     let filename = args.next().unwrap();
 
