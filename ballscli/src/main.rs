@@ -4,9 +4,9 @@ use std::net::TcpStream;
 use std::env;
 
 fn main() -> io::Result<()> {
-    let args: Vec<String> = env::args().collect(); 
-    let command = &args[1];
-    let filename = &args[2];
+    let args = env::args();
+    let command = args.next().unwrap();
+    let filename = args.next().unwrap();
 
     let mut stream = TcpStream::connect("127.0.0.1:7878")?;
 
