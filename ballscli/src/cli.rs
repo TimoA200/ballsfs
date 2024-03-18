@@ -18,5 +18,11 @@ pub enum Commands {
     Retrieve {
         /// filename to retrieve
         filename: String,
+    },
+    /// List all files
+    List,
+    /// Delete a file from the DFS
+    Delete {
+        filename: String,
     }
 }
