@@ -1,0 +1,10 @@
+services:
+  ballsd:
+    build:
+      context: .
+    container_name: ballsd
+    ports:
+      - 8001:8001
+    volumes:
+      - ${PWD}/balls-config.json:/balls-config.json
+    restart: always
